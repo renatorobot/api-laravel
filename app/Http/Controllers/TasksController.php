@@ -19,4 +19,15 @@ class TasksController extends Controller
     }
 
 
+    public function store(Request $request){
+
+        $task = Task::create([
+            'name'=> $request->input('name'),
+            'complete' =>$request->input('complete')
+        ]);
+
+       return $task;
+
+    }
+
 }
