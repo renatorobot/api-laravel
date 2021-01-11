@@ -36,5 +36,14 @@ class TasksController extends Controller
 
     }
 
+    public function update(Request $request, Task $task){
+
+        $task->name = $request->input('name');
+        $task->save();
+
+        return $task;
+
+    }
+
 
 }
